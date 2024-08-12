@@ -1,33 +1,31 @@
-# Gradle files
-.gradle/
-build/
+.vscode
+*.o
 
-# Local configuration file (sdk path, etc)
-local.properties
+# cpp00
+megaphone
+Phonebook
+dream
 
-# Log/OS Files
-*.log
+# cpp01
+Zombie
+Unnecessary
+replace
+Harl
+Harl_Filter
 
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
+# cpp02
+Fixed
+triangle
 
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+# cpp03
+ClapTrap
+ScavTrap
+FragTrap
+DiamondTrap
 
-# Keystore files
-*.jks
-*.keystore
+# cpp04
+Polymorphism
+World_on_fire
+Abstract_Class
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
 
-# Android Profiling
-*.hprof
