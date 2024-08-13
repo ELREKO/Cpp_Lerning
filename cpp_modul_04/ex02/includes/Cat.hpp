@@ -10,10 +10,7 @@ class Cat : public AAnimal
 {
 	private:
 		Brain* _brain;
-
-	protected:
-    	std::string setSpecialAnimalSound()const;
-        
+    	
   	public:
 		// Constructor 
 		Cat();
@@ -25,19 +22,15 @@ class Cat : public AAnimal
 		// Deconstructor 
 		~Cat();
 
+		// Members
+		void makeSound() const;
+
 		// Setter 
 		void setIdea(const unsigned nbr, const std::string idea);
 
 		// Getter
 		void getAllIdeas();
 		std::string getIdea(const unsigned int nbr);
-
-
-
-
-		// other member funciton
-		void checkBarinAllocation();
-
 };
 
 # endif

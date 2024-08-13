@@ -1,32 +1,37 @@
 # include "../includes/Cat.hpp"
-# include "../includes/Brain.hpp"
 
 Cat::Cat() : Animal()
 {
-    setType("Cat");
+    this->_type = "cat";
     this->_brain = new Brain;
-    checkBarinAllocation();
-    std::cout << "Call " << GREEN << "Class Cat: " << this->_type << RESET << BACKGROUND_GREEN << " Default Constructor !" << RESET << std::endl;
+    std::cout   << "Call " << FontColorTerminal::GREEN << "Class Cat: " << this->_type 
+                << FontColorTerminal::RESET << FontColorTerminal::BACKGROUND_GREEN 
+                << " Default Constructor !" << FontColorTerminal::RESET 
+                << std::endl;
 }
 
 
 Cat::Cat(const Cat& copy) : Animal(copy)
 {
     this->_type = copy._type;
-    this->_brain = new Brain(*copy._brain);
-    checkBarinAllocation();
-    std::cout << "Call " << GREEN << "Class Cat: " << this->_type << RESET <<  BACKGROUND_BLUE << " Copy Constructor !" << RESET << std::endl;
+    this->_brain = new Brain (*copy._brain);
+    std::cout   << "Call " << FontColorTerminal::GREEN << "Class Cat: " 
+                << this->_type << FontColorTerminal::RESET <<  FontColorTerminal::BACKGROUND_BLUE 
+                << " Copy Constructor !" << FontColorTerminal::RESET 
+                << std::endl;
 }
 
 Cat& Cat::operator=(const Cat &src)
 {
-    std::cout << "Use Operator (=) Overload " << GREEN << "from Class Cat: "  << src._type << " to Class Cat: " << this->_type << RESET <<   " "   << std::endl;
+    std::cout   << "Use Operator (=) Overload " << FontColorTerminal::GREEN 
+                << "from Class Cat: "  << src._type << " to Class Cat: " << this->_type 
+                << FontColorTerminal::RESET <<   " " 
+                << std::endl;
     if (this != &src)
     {
         this->_type = src._type;
         delete this->_brain;
         this->_brain = new Brain(*src._brain);
-        checkBarinAllocation();
     }
     return *this;
 }
@@ -34,21 +39,18 @@ Cat& Cat::operator=(const Cat &src)
 Cat::~Cat()
 {
     delete _brain;
-    std::cout << "Call " << GREEN << "Cat" << RESET << BACKGROUND_RED << " Deconstrucktor !" << RESET <<  std::endl;
+    std::cout   << "Call " << FontColorTerminal::GREEN << "Cat" << FontColorTerminal::RESET 
+                << FontColorTerminal::BACKGROUND_RED << " Deconstrucktor !" 
+                << FontColorTerminal::RESET <<  std::endl;
 }
 
-std::string Cat::setSpecialAnimalSound()const
+void Cat::makeSound() const
 {
-    return "Miau"; 
+    std::cout   << FontColorTerminal::BRIGHT_CYAN << "Animal: " << getType() 
+                << " --> Make Sound: \"" << "Miou" << "\""
+                << FontColorTerminal::RESET << std::endl;
 }
 
-void Cat::checkBarinAllocation()
-{
-    if (this->_brain == NULL)
-    {   
-		throw std::runtime_error("Error: Allocation Barin!");
-    }
-}
 
 void Cat::setIdea(const unsigned nbr, const std::string idea)
 {

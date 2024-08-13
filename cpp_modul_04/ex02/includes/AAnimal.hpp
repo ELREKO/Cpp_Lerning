@@ -1,18 +1,16 @@
 #include <string>
 #include <iostream>
-#include "../../lib/console_setting/color.h"
+#include "../../lib/console_setting/includes/FontColorTerminal.hpp"
 
 
-
-# ifndef AANIMAL_HPP
-# define AANIMAL_HPP
+# ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 
 class AAnimal
 {
 	protected:
 		std::string _type;
-    virtual std::string setSpecialAnimalSound()const = 0;
         
   public:
     // Constructor 
@@ -24,7 +22,7 @@ class AAnimal
     AAnimal &operator=(const AAnimal &src);
 
     // Deconstructor 
-    virtual ~AAnimal() = 0;
+    virtual ~AAnimal();
 
     // Getter
     std::string getType(void)const;
@@ -33,7 +31,7 @@ class AAnimal
     void setType(const std::string type);
 
     // requested members
-    void makeSound() const; 
+    virtual void makeSound() const = 0; // pure virtual class 
 };
 
 # endif

@@ -1,7 +1,6 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-
 # ifndef DOG_HPP
 # define DOG_HPP
 
@@ -10,9 +9,6 @@ class Dog : public Animal
 {
 	private:
 		Brain* _brain;
-	
-	protected:
-    	std::string setSpecialAnimalSound()const;
         
   	public:
 		// Constructor 
@@ -25,8 +21,8 @@ class Dog : public Animal
 		// Deconstructor 
 		~Dog();
 
-		// other member funciton
-		void checkBarinAllocation();
+		// Members
+		void makeSound() const;
 
 		// Setter 
 		void setIdea(const unsigned nbr, const std::string idea);

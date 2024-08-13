@@ -1,7 +1,7 @@
 #include <string>
 #include <iostream>
 #include <stdexcept>
-#include "../../lib/console_setting/color.h"
+#include "../../lib/console_setting/includes/FontColorTerminal.hpp"
 
 # define MAX_IDEAS 100
 
@@ -10,7 +10,7 @@
 
 class Brain
 {
-private: 
+private:
 	std::string _ideas[MAX_IDEAS];
 
 public:

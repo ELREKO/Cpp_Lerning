@@ -1,7 +1,6 @@
 #include <string>
 #include <iostream>
-#include "../../lib/console_setting/color.h"
-#include "Brain.hpp"
+#include "../../lib/console_setting/includes/FontColorTerminal.hpp"
 
 
 # ifndef ANIMAL_HPP
@@ -12,7 +11,6 @@ class Animal
 {
 	protected:
 		std::string _type;
-    virtual std::string setSpecialAnimalSound()const;
         
   public:
     // Constructor 
@@ -33,7 +31,7 @@ class Animal
     void setType(const std::string type);
 
     // requested members
-    void makeSound() const; 
+    virtual void makeSound() const; 
 };
 
 # endif

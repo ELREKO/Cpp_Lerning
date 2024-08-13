@@ -1,12 +1,14 @@
 # include "../includes/Dog.hpp"
-# include "../includes/Brain.hpp"
 
 Dog::Dog() : Animal()
 {
-    setType("Dog");
+    this->_type = "Dog";
     this->_brain = new Brain;
-    checkBarinAllocation();
-    std::cout << "Call " << YELLOW << "Class Dog: " << this->_type << RESET << BACKGROUND_GREEN << " Default Constructor !" << RESET << std::endl;
+    std::cout   << "Call " << FontColorTerminal::YELLOW 
+                << "Class Dog: " << this->_type << FontColorTerminal::RESET 
+                << FontColorTerminal::BACKGROUND_GREEN 
+                << " Default Constructor !" << FontColorTerminal::RESET 
+                << std::endl;
 }
 
 
@@ -14,19 +16,21 @@ Dog::Dog(const Dog& copy) : Animal(copy)
 {
     this->_type = copy._type;
     this->_brain = new Brain (*copy._brain);
-    checkBarinAllocation();
-    std::cout << "Call " << YELLOW << "Class Dog: " << this->_type << RESET <<  BACKGROUND_BLUE << " Copy Constructor !" << RESET << std::endl;
+    std::cout   << "Call " << FontColorTerminal::YELLOW << "Class Dog: " << this->_type 
+                << FontColorTerminal::RESET <<  FontColorTerminal::BACKGROUND_BLUE 
+                << " Copy Constructor !" << FontColorTerminal::RESET << std::endl;
 }
 
 Dog& Dog::operator=(const Dog &src)
 {
-    std::cout << "Use Operator (=) Overload " << YELLOW << "from Class Dog: "  << src._type << " to Class Dog: " << this->_type << RESET <<   " "   << std::endl;
+    std::cout   << "Use Operator (=) Overload " << FontColorTerminal::YELLOW 
+                << "from Class Dog: "  << src._type << " to Class Dog: " << this->_type 
+                << FontColorTerminal::RESET <<   " "   << std::endl;
     if (this != &src)
     {
         this->_type = src._type;
         delete this->_brain;
         this->_brain = new Brain(*src._brain);
-        checkBarinAllocation();
     }
     return *this;
 }
@@ -34,21 +38,19 @@ Dog& Dog::operator=(const Dog &src)
 Dog::~Dog()
 {
     delete _brain;
-    std::cout << "Call " << YELLOW << "Dog" << RESET << BACKGROUND_RED << " Deconstrucktor !" << RESET <<  std::endl;
+    std::cout   << "Call " << FontColorTerminal::YELLOW << "Dog" 
+                << FontColorTerminal::RESET << FontColorTerminal::BACKGROUND_RED 
+                << " Deconstrucktor !" << FontColorTerminal::RESET 
+                <<  std::endl;
 }
 
-std::string Dog::setSpecialAnimalSound()const
+void Dog::makeSound() const
 {
-    return "Woof"; 
+    std::cout   << FontColorTerminal::BRIGHT_CYAN << "Animal: " << getType() 
+                << " --> Make Sound: \"" << "Woof" << "\""
+                << FontColorTerminal::RESET << std::endl;
 }
 
-void Dog::checkBarinAllocation()
-{
-    if (this->_brain == NULL)
-    {   
-		throw std::runtime_error("Error: Allocation Barin!");
-    }
-}
 
 void Dog::setIdea(const unsigned nbr, const std::string idea)
 {
@@ -69,6 +71,6 @@ void Dog::getAllIdeas()
 }
 
 std::string Dog::getIdea(const unsigned int nbr)
-{  
-   return this->_brain->getIdea(nbr);
+{
+   return this->_brain->getIdea(nbr) ;
 }

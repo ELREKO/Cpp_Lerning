@@ -6,10 +6,7 @@
 
 
 class Cat : public Animal
-{
-	protected:
-    	std::string setSpecialAnimalSound()const;
-        
+{ 
   	public:
 		// Constructor 
 		Cat();
@@ -20,6 +17,9 @@ class Cat : public Animal
 
 		// Deconstructor 
 		~Cat();
+
+		// Members
+		void makeSound() const; 
 };
 
 # endif
