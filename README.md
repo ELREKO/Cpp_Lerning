@@ -19,3 +19,7 @@
 ## **[cpp04](cpp_modul_04/README_cpp04.md): Templates und Ausnahmebehandlung**
 - **Ziel:** Einführung in fortgeschrittene C++-Konzepte wie Templates und Fehlerbehandlung.
 - **Schwerpunkte:** Erstellen flexibler und robuster Programme, effiziente Fehlerbehandlung.
+
+## [Some extra Information](doc/info/cppExtra_00_Overview.md)
+- [Heap and Stack](doc/info/cppExtra_01_Heap_and_Stack_allocation.md)
+
