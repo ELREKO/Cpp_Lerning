@@ -20,19 +20,6 @@ To get started with the **`cpp04`** project, you will need:
 - A code editor or IDE (e.g., VSCode, CLion)
 - Basic knowledge of C++ syntax and programming concepts
 
-### Installation
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/ELREKO/cpp_modul_04.git
-   cd cpp_modul_04
-   ```
-
-2. **Install the necessary dependencies:**
-
-   No external dependencies are required for this project.
-
 ### Build Instructions
 
 Switch to the exercise folder
@@ -45,6 +32,21 @@ and run the `make` command to compile the code:
 ```bash
 make
 ```
+
+to clear the folder 
+```bash 
+make fclean
+```
+
+or use 
+```bash
+make re 
+```
+if you change someting in the code
+
+### Execution
+
+Folder:
 
 - **ex00**        → `./Polymorphism`
 - **ex01**        → `./watch_it_burn`
