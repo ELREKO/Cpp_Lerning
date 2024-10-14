@@ -1,4 +1,4 @@
-<[back](cpp02_01_polymorphisen.md) | [main](/) | [forward](cpp02_00_lerning.md) >
+<[back](cpp02_01_polymorphisen.md) | [main](/) | [forward](cpp02_03_float_vs_fixed_number.md) >
 
 --- 
 
