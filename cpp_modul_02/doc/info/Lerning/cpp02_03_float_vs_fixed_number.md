@@ -2,84 +2,84 @@
 
 --- 
 
-
-# Gleitkommazahlen (Floating Point Numbers)
+# Floating Point Numbers
+**Learning from C++_02 -> ex_00**
 
 [1](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point.html)  
-**Genauigkeit vs. Präzision**
-- **Ganzzahlige (Integer) Zahlen** sind *sehr genau*, aber nicht immer präzise genug, wenn es um feinere Abstufungen geht. Sie können nur ganze Werte ohne Nachkommastellen darstellen.
-- **Gleitkommazahlen (Floating Point)** hingegen bieten eine *hohe Präzision* durch die Fähigkeit, Dezimalwerte zu speichern. Sie sind jedoch *nicht immer genau*, da sie aufgrund der begrenzten Mantissenlänge und des Exponenten oft Rundungsfehler enthalten. Dies führt zu Ungenauigkeiten bei Berechnungen.
+**Accuracy vs. Precision**
+- **Integer numbers** are *very accurate*, but not always precise enough when it comes to finer gradations. They can only represent whole values without decimal places.
+- **Floating point numbers**, on the other hand, offer *high precision* by being able to store decimal values. However, they are *not always accurate* due to the limited mantissa length and exponent, often leading to rounding errors. This results in inaccuracies in calculations.
 
 [2](https://www.cprogramming.com/tutorial/floating_point/understanding_floating_point_representation.html)  
-**Darstellung von Gleitkommazahlen (Float)**
-- Gleitkommazahlen werden im Speicher durch die IEEE 754-Norm repräsentiert. Dabei teilt sich eine 32-Bit-Float-Zahl in drei Hauptkomponenten auf:
+**Representation of Floating Point Numbers (Float)**
+- Floating point numbers are represented in memory according to the IEEE 754 standard. A 32-bit float number is divided into three main components:
   
   `seeeeeeeemmmmmmmmmmmmmmmmmmmmmmm`  
-  **s = Vorzeichenbit (sign)**  
+  **s = Sign bit**  
   **e = Exponent**  
-  **m = Mantisse (fraction)**
+  **m = Mantissa (fraction)**
 
-- **Vorzeichenbit (S)**: Das höchstwertige Bit (Position 31) bestimmt das Vorzeichen. `0` bedeutet positiv, `1` bedeutet negativ.
-- **Exponent (E)**: Belegt die Bits von Position 30 bis 23 und speichert den verschobenen Exponenten (mit einem Bias, um negative Exponenten darzustellen).
-- **Mantisse (M)**: Die verbleibenden Bits (Positionen 22 bis 0) repräsentieren die signifikanten Stellen der Zahl. Die Mantisse beginnt implizit immer mit `1`.
+- **Sign bit (S)**: The most significant bit (position 31) determines the sign. `0` means positive, `1` means negative.
+- **Exponent (E)**: Occupies bits from position 30 to 23 and stores the biased exponent (with a bias to represent negative exponents).
+- **Mantissa (M)**: The remaining bits (positions 22 to 0) represent the significant digits of the number. The mantissa always implicitly starts with `1`.
 
-Beispiel für eine Float-Zahl:
+Example of a float number:
 ```
 1 + 1/2 + 0/4 + 1/8 + 1/16 = 1.6875
 ```
 
-### Float-Vergleich
-Gleitkommazahlen sind aufgrund von Rundungsfehlern *nicht direkt zum Vergleichen* geeignet. Dies liegt an der begrenzten Präzision, mit der Zahlen gespeichert werden. Statt eines direkten Vergleichs mit `==` wird oft ein Vergleich unter Berücksichtigung eines kleinen Toleranzwertes (Epsilon) verwendet:
+### Float Comparison
+Floating point numbers are *not directly suitable for comparison* due to rounding errors. This is because of the limited precision with which numbers are stored. Instead of direct comparison using `==`, comparisons often account for a small tolerance (epsilon):
 
-- Der kleinste Unterschied (Maschinengenauigkeit) bei einem `float` wird durch *Epsilon* dargestellt. Für einen 32-Bit-Float beträgt dieser Wert typischerweise etwa:
+- The smallest difference (machine precision) in a `float` is represented by *epsilon*. For a 32-bit float, this value is typically:
   ```
   Epsilon ≈ 1.1920929e-7
   ```
-- Dies repräsentiert die minimale Differenz, die zwei benachbarte Float-Zahlen voneinander haben können.
+- This represents the minimal difference that two adjacent floating point numbers can have.
 
-### Überlauf (Overflow)
-- Bei **Ganzzahlen (Integer)** führt ein Überlauf oft dazu, dass der Wert auf Null oder einen anderen Wert zurückspringt, ohne dass dies direkt erkennbar ist.
-- Bei **Gleitkommazahlen** wird ein Überlauf meistens durch eine Darstellung von positiver oder negativer Unendlichkeit signalisiert (`+∞` oder `-∞`). Dadurch kann der Überlauf leichter erkannt werden.
-- Vorsicht ist geboten bei der Konvertierung von `float` zu `int`, da dies zu unerwarteten Ergebnissen führen kann, insbesondere wenn ein Überlauf auftritt.
+### Overflow
+- For **integers**, overflow often results in wrapping around to zero or another value, without clear detection.
+- For **floating point numbers**, overflow is typically represented by positive or negative infinity (`+∞` or `-∞`), making overflow easier to detect.
+- Be cautious when converting between `float` and `int`, as this may lead to unexpected results, especially when overflow occurs.
 
-Eine mögliche Lösung zur Vermeidung von Überlauf ist die Verwendung von **Double**, da dieses Format mehr Bits für den Exponenten und die Mantisse hat und somit größere Werte und eine höhere Präzision erlaubt.
+A potential solution to avoid overflow is using **double**, as this format allocates more bits for both the exponent and mantissa, allowing for larger values and higher precision.
 
 ---
 
-# Festkommazahlen (Fixed Point Numbers)
+# Fixed Point Numbers
 
-Im Gegensatz zu [Gleitkommazahlen](#Floating-Point-Numbers) sind **Festkommazahlen (Fixed Point Numbers)** eine gute Alternative, um:
-- Eine **höhere Leistung** zu erzielen, da nur Ganzzahlen verarbeitet werden.
-- Eine **höhere Genauigkeit** im Vergleich zu Gleitkommazahlen zu gewährleisten.
-- Die **Vergleichbarkeit** zu verbessern, da keine Rundungsfehler auftreten.
+In contrast to [Floating Point Numbers](#Floating-Point-Numbers), **Fixed Point Numbers** are a good alternative to:
+- Achieve **higher performance**, as only integers are processed.
+- Ensure **higher accuracy** compared to floating point numbers.
+- Improve **comparability**, as there are no rounding errors.
 
-### Berechnung der Festkommazahlen
-Festkommazahlen werden durch eine feste Anzahl von Bits für den Ganzzahl- und Nachkommaanteil dargestellt. Dies wird durch das Format `fixed<w,b>` spezifiziert, wobei:
-- `w` die gesamte Anzahl der Bits ist (inklusive Vorzeichenbit).
-- `b` die Anzahl der Bits für den Nachkommaanteil ist.
+### Fixed Point Number Calculations
+Fixed point numbers are represented by a fixed number of bits for the integer and fractional part. This is specified by the format `fixed<w,b>`, where:
+- `w` is the total number of bits (including the sign bit).
+- `b` is the number of bits reserved for the fractional part.
 
-**Beispiel:**
-- Betrachten wir die Zahl `2,75` im `fixed<8,3>` Format:
+**Example:**
+- Consider the number `2.75` in the `fixed<8,3>` format:
   ```
-  2,75 (dezimal) = 00010.110 (binär)
+  2.75 (decimal) = 00010.110 (binary)
   ```
-  Dies kann zerlegt werden in:
+  This can be broken down as:
   ```
-  2^1 + 2^(-1) + 2^(-2) = 2,75
+  2^1 + 2^(-1) + 2^(-2) = 2.75
   ```
 
-Das Format `fixed<8,3>` bedeutet, dass insgesamt 8 Bits zur Verfügung stehen, wobei 3 Bits für den Nachkommaanteil reserviert sind. Die restlichen 5 Bits (einschließlich eines Vorzeichenbits, falls notwendig) repräsentieren den Ganzzahlanteil.
+The `fixed<8,3>` format means that a total of 8 bits are available, with 3 bits reserved for the fractional part. The remaining 5 bits (including a sign bit, if necessary) represent the integer part.
 
-**Berechnung mit Binärzahlen:**
-Die binäre Darstellung einer Festkommazahl kann durch den exakten Wert berechnet werden. Nehmen wir:
+**Binary Number Calculations:**
+The binary representation of a fixed point number can be calculated by its exact value. For instance:
 ```
 0x2^4 + 0x2^3 + 0x2^2 + 1x2^1 + 0x2^0 + 1x2^(-1) + 1x2^(-2) + 0x2^(-3)
 ```
-- Ganzzahlteil: `2^1 = 2`
-- Bruchteil: `2^(-1) + 2^(-2) = 0,75`
+- Integer part: `2^1 = 2`
+- Fractional part: `2^(-1) + 2^(-2) = 0.75`
 
-Daher ist der Wert der Zahl: `2 + 0,75 = 2,75`.
+Thus, the value of the number is: `2 + 0.75 = 2.75`.
 
-### Vor- und Nachteile von Festkommazahlen:
-- **Vorteile**: Schnelle Berechnung und konstante Genauigkeit. Sie sind nützlich für eingebettete Systeme oder Umgebungen, in denen Speicher und Rechenleistung begrenzt sind.
-- **Nachteile**: Sie können nicht so große Werte oder so feine Unterschiede wie Gleitkommazahlen darstellen, da die Anzahl der Bits begrenzt ist.
+### Advantages and Disadvantages of Fixed Point Numbers:
+- **Advantages**: Fast computation and consistent precision. They are useful for embedded systems or environments with limited memory and processing power.
+- **Disadvantages**: They cannot represent values as large or as fine as floating point numbers due to the limited number of bits.
