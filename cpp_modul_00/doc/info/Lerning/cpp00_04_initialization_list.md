@@ -1,4 +1,4 @@
-< [back](cpp00_03_class_instance.md)| [main](/) | [forward](cpp00_05_class_members_and_attributs) >
+< [back](cpp00_03_class_instance.md)| [main](/) | [forward](cpp00_05_class_members_and_attributs.md) >
 
 ---
 
