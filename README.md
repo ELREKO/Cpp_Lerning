@@ -22,6 +22,12 @@ In this project, there are extensive tasks to learn C++.
 - **Goal:** Introduction to advanced C++ concepts like templates and error handling.
 - **Focus:** Creating flexible and robust programs, efficient error handling.
 
+## **[cpp05](cpp_modul_05/README_cpp05.md): Exception Handling and Nested Classes**
+- **Goal:** How to handle runtime errors and creating speacial errors and structed with nested classe.
+- **Focus:** Implementing try, catch, and throw for robust error handling, understanding exception safety, and working with nested classes to encapsulate logic.
+
+
+
 ## [Some extra Information](doc/info/cppExtra_00_Overview.md)
 - [Heap and Stack](doc/info/cppExtra_01_Heap_and_Stack_allocation.md)
 
@@ -40,8 +46,8 @@ To get started with the projects, you will need:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/ELREKO/Cpp_Lerning.git
-   cd Cpp_Lerning
+   git clone https://github.com/ELREKO/cpp_Lerning.git
+   cd cpp_Lerning
    ```
 
    Switch to the desired exercise `cpp_modul_00` - `cpp_modul_04`
@@ -57,6 +63,7 @@ To get started with the projects, you will need:
 - **[cpp02](cpp_modul_02/README_cpp02.md)**
 - **[cpp03](cpp_modul_03/README_cpp03.md)**
 - **[cpp04](cpp_modul_04/README_cpp04.md)**
+- **[cpp05](cpp_modul_05/README_cpp05.md)**
 
 2. **Install the necessary dependencies:**
 
