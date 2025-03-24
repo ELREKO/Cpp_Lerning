@@ -1,6 +1,23 @@
 # C++ Learning
+<!-- Do this better! -> "like 9 Project with different exexisc " 
+
+- execersi insgesamt 
+00 - 3ex
+01 - 7ex
+02 - 4ex
+03 - 4ex
+04 - 4ex
+05 - 4ex 
+06 - 3ex
+07 - 
+08 - 
+09 -
+
+-->
 
 In this project, there are extensive tasks to learn C++.
+All exercises where compiled and tested on macOS `Catalina 10.15.7` and `Ubuntu 20.04.4 LTS`.
+All of those exercises are compilable with the `-std=c++98-flag`, since this was a requirement for this project.
 
 ## **[cpp00](cpp_modul_00/README_cpp00.md): Introduction to C++**
 - **Goal:** Familiarity with the basics of C++ programming.
@@ -27,6 +44,10 @@ In this project, there are extensive tasks to learn C++.
 - **Focus:** Implementing try, catch, and throw for robust error handling, understanding exception safety, and working with nested classes to encapsulate logic.
 
 
+## **[cpp06](cpp_modul_06/README_cpp06.md):Casts and Static/Dynamic Types**
+- **Goal:** Exploring different casting mechanisms in C++ and understanding type safety.
+- **Focus:** `static_cast`, `dynamic_cast`, `const_cast`, and `reinterpret_cast`, and understanding polymorphism and RTTI.
+
 
 ## [Some extra Information](doc/info/cppExtra_00_Overview.md)
 - [Heap and Stack](doc/info/cppExtra_01_Heap_and_Stack_allocation.md)
@@ -46,11 +67,11 @@ To get started with the projects, you will need:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/ELREKO/cpp_Lerning.git
-   cd cpp_Lerning
+   git clone https://github.com/ELREKO/cpp_exercise.git
+   cd cpp_exercise
    ```
 
-   Switch to the desired exercise `cpp_modul_00` - `cpp_modul_04`
+   Switch to the desired exercise `cpp_modul_00` - `cpp_modul_09`
    **For example:**
    ```bash
    cd cpp_modul_00
@@ -64,6 +85,10 @@ To get started with the projects, you will need:
 - **[cpp03](cpp_modul_03/README_cpp03.md)**
 - **[cpp04](cpp_modul_04/README_cpp04.md)**
 - **[cpp05](cpp_modul_05/README_cpp05.md)**
+- **[cpp06](cpp_modul_06/README_cpp06.md)**
+
+
+
 
 2. **Install the necessary dependencies:**
 
