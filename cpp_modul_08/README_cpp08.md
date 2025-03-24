@@ -1,12 +1,12 @@
-# LEARNING: C++ [cpp modul 06](doc/PDF/cpp_06_modul_subject.pdf) - **`cpp06`**
-[Subject](doc/PDF/cpp_06_modul_subject.pdf)
+# LEARNING: C++ [cpp modul 08](doc/PDF/cpp_08_modul_subject.pdf) - **`cpp08`**
+[Subject](doc/PDF/cpp_08_modul_subject.pdf)
 
 ## Project Overview
 
-The **`cpp06`** project is designed to introduce you to the fundamental concepts of C++ programming. 
+The **`cpp08`** project is designed to introduce you to the fundamental concepts of C++ programming. 
 
 
-Referenz to the [Learning Overview](doc/info/Lerning/cpp06_00_lerning.md) for  this modul.
+Referenz to the [Learning Overview](doc/info/Lerning/cpp08_00_lerning.md) for  this modul.
 
 Please note the [rules](doc/info/rulesetting/cpp_rules_picine.md) for the cpp Picine module.
 
@@ -14,11 +14,12 @@ Please note the [rules](doc/info/rulesetting/cpp_rules_picine.md) for the cpp Pi
 
 ### Requirements
 
-To get started with the **`cpp06`** project, you will need:
+To get started with the **`cpp08`** project, you will need:
 
 - A C++ compiler (e.g., `g++`, `clang++`)
 - A code editor or IDE (e.g., VSCode, CLion)
 - Basic knowledge of C++ syntax and programming concepts
+
 
 ### Build Instructions
 
@@ -35,14 +36,17 @@ make
 
 
 to clear the folder 
+
 ```bash 
 make fclean
 ```
 
 or use 
+
 ```bash
 make re 
 ```
+
 if you change someting in the code
 
 ### Execution

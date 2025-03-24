@@ -1,0 +1,100 @@
+
+# Array
+Ideal for storage but <span style="background-color: green;">must be known at compile time!</span>
+
+## Include
+```cpp
+#include <array>
+```
+
+## Constructors
+```cpp
+std::array<int, 5> arr1;                        // Default constructor (all elements are uninitialized)
+std::array<int, 5> arr2 = {1, 2, 3, 4, 5};     // Initialization with values
+std::array<int, 5> arr3 = {};                   // All elements are 0
+std::array<int, 5> arr4 = arr2;                 // Copying from another array
+```
+
+## Methods
+
+The most common methods of the `std::array` container
+
+| Method                     | Description                                                               | Example                                      |
+|----------------------------|---------------------------------------------------------------------------|-----------------------------------------------|
+| `at(index)`                | Returns the element at the specified position (bound check).            | `int value = arr.at(2);`                     |
+| `operator[]`               | Returns the element at the specified position (no bound check).         | `int value = arr[2];`                        |
+| `front()`                  | Returns the first element.                                               | `int first = arr.front();`                   |
+| `back()`                   | Returns the last element.                                                | `int last = arr.back();`                     |
+| `size()`                   | Returns the number of elements in the array.                            | `size_t n = arr.size();`                     |
+| `fill(value)`              | Fills the array with the specified value.                               | `arr.fill(10);`                              |
+| `data()`                   | Returns a pointer to the underlying array.                               | `int* p = arr.data();`                       |
+
+1. **`at(index)`**:
+   - **Description**: Returns the element at the specified position and performs a bound check.
+   - **Example**:
+     ```cpp
+     std::array<int, 5> arr = {1, 2, 3, 4, 5};
+     int value = arr.at(2); // Returns 3
+     ```
+
+2. **`fill(value)`**:
+   - **Description**: Fills all elements of the array with the specified value.
+   - **Example**:
+     ```cpp
+     std::array<int, 5> arr;
+     arr.fill(10); // Fills the array with 10
+     // Array now contains: [10, 10, 10, 10, 10]
+     ```
+
+## Accessing Elements
+- **Direct access** via indices:
+  - `operator[]` has no bound check, which can lead to undefined behavior if the index is outside the valid range.
+  - `at()` performs a bound check and throws a `std::out_of_range` exception if the index is invalid.
+
+```cpp
+#include <iostream>
+#include <array>
+
+int main() {
+    std::array<int, 5> arr = {1, 2, 3, 4, 5};
+    
+    try {
+        std::cout << arr.at(10) << std::endl;  // Exception will be thrown 
+    } catch (const std::out_of_range& e) {
+        std::cerr << "Index out of range: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
+```
+
+## Iterators
+- `begin()` and `end()`: Forward iteration
+- `rbegin()` and `rend()`: Reverse iteration
+- `cbegin()` and `cend()`: Constant iterators (no modifications allowed)
+
+```cpp
+#include <iostream>
+#include <array>
+
+int main() {
+    std::array<int, 5> arr = {1, 2, 3, 4, 5};
+
+    // Iterating with an iterator
+    for (std::array<int, 5>::iterator it = arr.begin(); it != arr.end(); ++it) {
+        std::cout << *it << " ";  // Output: 1 2 3 4 5
+    }
+    std::cout << std::endl;
+
+    // Reverse iteration with rbegin() and rend()
+    for (std::array<int, 5>::reverse_iterator rit = arr.rbegin(); rit != arr.rend(); ++rit) {
+        std::cout << *rit << " ";  // Output: 5 4 3 2 1
+    }
+
+    for (std::array<int, 5>::const_iterator it = arr.cbegin(); it != arr.cend(); ++it) {
+        std::cout << *it << " "; // Outputs the values, but cannot be modified
+    }
+
+    return 0;
+}
+```

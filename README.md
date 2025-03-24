@@ -10,8 +10,8 @@
 05 - 4ex 
 06 - 3ex
 07 - 3ex
-08 - 
-09 -
+08 - 3ex 
+09 - 
 
 -->
 
@@ -44,14 +44,23 @@ All of those exercises are compilable with the `-std=c++98-flag`, since this was
 - **Focus:** Implementing try, catch, and throw for robust error handling, understanding exception safety, and working with nested classes to encapsulate logic.
 
 
-## **[cpp06](cpp_modul_06/README_cpp06.md):Casts and Static/Dynamic Types**
+## **[cpp06](cpp_modul_06/README_cpp06.md): Casts and Static/Dynamic Types**
 - **Goal:** Exploring different casting mechanisms in C++ and understanding type safety.
 - **Focus:** `static_cast`, `dynamic_cast`, `const_cast`, and `reinterpret_cast`, and understanding polymorphism and RTTI.
 
-## **[cpp07](cpp_modul_07/README_cpp07.md):Templates and Iterators**
+## **[cpp07](cpp_modul_07/README_cpp07.md): Templates and Iterators**
 - **Goal:** knowledge of generic programming with templates .
 - **Focus:** Implementing function and class templates.
 
+
+## **[cpp08](cpp_modul_08/README_cpp08.md): Containers and the Standard Template Library (STL)**
+- **Goal:** Understanding and utilizing STL containers for efficient data management .
+- **Focus:** Working with `vector, list, deque, set, map, unordered_map`, and other containers, learning about iterators, and mastering STL algorithm.
+
+
+## **[cpp09](cpp_modul_09/README_cpp09.md): Containers and Algorithms**
+- **Goal:** Gaining proficiency with the Standard Template Library (STL)..
+- **Focus:** Mastering algorithms, and optimizing performance with iterators.
 
 ## [Some extra Information](doc/info/cppExtra_00_Overview.md)
 - [Heap and Stack](doc/info/cppExtra_01_Heap_and_Stack_allocation.md)
@@ -91,7 +100,8 @@ To get started with the projects, you will need:
 - **[cpp05](cpp_modul_05/README_cpp05.md)**
 - **[cpp06](cpp_modul_06/README_cpp06.md)**
 - **[cpp07](cpp_modul_07/README_cpp07.md)**
-
+- **[cpp08](cpp_modul_08/README_cpp08.md)**
+- **[cpp09](cpp_modul_09/README_cpp09.md)**
 
 
 2. **Install the necessary dependencies:**
