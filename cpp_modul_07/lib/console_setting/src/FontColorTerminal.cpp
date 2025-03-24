@@ -1,0 +1,37 @@
+#include "../includes/FontColorTerminal.hpp"
+
+const std::string FontColorTerminal::RESET = "\033[0m";
+const std::string FontColorTerminal::BOLD = "\033[1m";
+const std::string FontColorTerminal::UNDERLINE = "\033[4m";
+const std::string FontColorTerminal::BLACK = "\033[30m";
+const std::string FontColorTerminal::RED = "\033[31m";
+const std::string FontColorTerminal::GREEN = "\033[32m";
+const std::string FontColorTerminal::YELLOW = "\033[33m";
+const std::string FontColorTerminal::BLUE = "\033[34m";
+const std::string FontColorTerminal::MAGENTA = "\033[35m";
+const std::string FontColorTerminal::CYAN = "\033[36m";
+const std::string FontColorTerminal::WHITE = "\033[37m";
+const std::string FontColorTerminal::BRIGHT_BLACK = "\033[90m";
+const std::string FontColorTerminal::BRIGHT_RED = "\033[91m";
+const std::string FontColorTerminal::BRIGHT_GREEN = "\033[92m";
+const std::string FontColorTerminal::BRIGHT_YELLOW = "\033[93m";
+const std::string FontColorTerminal::BRIGHT_BLUE = "\033[94m";
+const std::string FontColorTerminal::BRIGHT_MAGENTA = "\033[95m";
+const std::string FontColorTerminal::BRIGHT_CYAN = "\033[96m";
+const std::string FontColorTerminal::BRIGHT_WHITE = "\033[97m";
+const std::string FontColorTerminal::BACKGROUND_BLACK = "\033[40m";
+const std::string FontColorTerminal::BACKGROUND_RED = "\033[41m";
+const std::string FontColorTerminal::BACKGROUND_GREEN = "\033[42m";
+const std::string FontColorTerminal::BACKGROUND_YELLOW = "\033[43m";
+const std::string FontColorTerminal::BACKGROUND_BLUE = "\033[44m";
+const std::string FontColorTerminal::BACKGROUND_MAGENTA = "\033[45m";
+const std::string FontColorTerminal::BACKGROUND_CYAN = "\033[46m";
+const std::string FontColorTerminal::BACKGROUND_WHITE = "\033[47m";
+const std::string FontColorTerminal::BRIGHT_BACKGROUND_BLACK = "\033[100m";
+const std::string FontColorTerminal::BRIGHT_BACKGROUND_RED = "\033[101m";
+const std::string FontColorTerminal::BRIGHT_BACKGROUND_GREEN = "\033[102m";
+const std::string FontColorTerminal::BRIGHT_BACKGROUND_YELLOW = "\033[103m";
+const std::string FontColorTerminal::BRIGHT_BACKGROUND_BLUE = "\033[104m";
+const std::string FontColorTerminal::BRIGHT_BACKGROUND_MAGENTA = "\033[105m";
+const std::string FontColorTerminal::BRIGHT_BACKGROUND_CYAN = "\033[106m";
+const std::string FontColorTerminal::BRIGHT_BACKGROUND_WHITE = "\033[107m";

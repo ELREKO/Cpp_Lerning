@@ -5,7 +5,7 @@ CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 # Directories
 SRC_DIR = src
 OBJ_DIR = build
-INCLUDES_DIR = includes
+INCLUDES_DIR = include
 LIB_DIR = ../lib/console_setting/src
 
 # List of source files (excluding main.cpp)
@@ -15,7 +15,7 @@ SRC_FILES = $(wildcard $(SRC_DIR)/*.cpp) $(wildcard $(LIB_DIR)/*.cpp)
 OBJECTS = $(patsubst %.cpp,$(OBJ_DIR)/%.o,$(notdir $(SRC_FILES)))
 
 # Executable name
-EXECUTABLE = Frau_Holle_shrubbery
+EXECUTABLE = Array
 
 # Targets
 all: $(OBJ_DIR) $(EXECUTABLE)

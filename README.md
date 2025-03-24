@@ -9,7 +9,7 @@
 04 - 4ex
 05 - 4ex 
 06 - 3ex
-07 - 
+07 - 3ex
 08 - 
 09 -
 
@@ -47,6 +47,10 @@ All of those exercises are compilable with the `-std=c++98-flag`, since this was
 ## **[cpp06](cpp_modul_06/README_cpp06.md):Casts and Static/Dynamic Types**
 - **Goal:** Exploring different casting mechanisms in C++ and understanding type safety.
 - **Focus:** `static_cast`, `dynamic_cast`, `const_cast`, and `reinterpret_cast`, and understanding polymorphism and RTTI.
+
+## **[cpp07](cpp_modul_07/README_cpp07.md):Templates and Iterators**
+- **Goal:** knowledge of generic programming with templates .
+- **Focus:** Implementing function and class templates.
 
 
 ## [Some extra Information](doc/info/cppExtra_00_Overview.md)
@@ -86,7 +90,7 @@ To get started with the projects, you will need:
 - **[cpp04](cpp_modul_04/README_cpp04.md)**
 - **[cpp05](cpp_modul_05/README_cpp05.md)**
 - **[cpp06](cpp_modul_06/README_cpp06.md)**
-
+- **[cpp07](cpp_modul_07/README_cpp07.md)**
 
 
 
