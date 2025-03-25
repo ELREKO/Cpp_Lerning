@@ -1,4 +1,6 @@
+< [back](cpp08_01_02_deque.md)| [main](/) | [forward](cpp08_01_04_array) > 
 
+---
 # List
 Simple flexible insertion and deletion at any position is possible and more efficient than with vector and deque, <span style="background-color: red;">but it does not provide direct access to elements via indices.</span>
 

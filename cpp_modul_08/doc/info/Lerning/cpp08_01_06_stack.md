@@ -1,4 +1,6 @@
+< [back](cpp08_01_05_forward_list.md)| [main](/) | [forward](cpp08_02_00_Container_Assoziativ.md) > 
 
+---
 # Stack
 ## Include
 ```cpp

@@ -1,4 +1,6 @@
+< [back](cpp08_01_04_array)| [main](/) | [forward](cpp08_01_06_stack.md) > 
 
+---
 # Forward List
 Like `list`, random element access is not possible! 
 Requires less memory than `list`!

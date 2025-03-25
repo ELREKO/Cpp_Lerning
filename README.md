@@ -1,22 +1,4 @@
 # C++ Learning
-<!-- Do this better! -> "like 9 Project with different exexisc " 
-
-- execersi insgesamt 
-00 - 3ex
-01 - 7ex
-02 - 4ex
-03 - 4ex
-04 - 4ex
-05 - 4ex 
-06 - 3ex
-07 - 3ex
-08 - 3ex 
-09 - 3ex
-
-      38ex 
-
--->
-
 
 In this project, there are 38 different exercises from 42 School to learn the full scope of C++.
 All exercises were compiled and tested on macOS `Catalina 10.15.7` and `Ubuntu 20.04.4 LTS`.

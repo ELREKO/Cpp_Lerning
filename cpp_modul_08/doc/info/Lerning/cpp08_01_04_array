@@ -1,4 +1,6 @@
+< [back](cpp08_01_03_list.md)| [main](/) | [forward](cpp08_01_05_forward_list.md) > 
 
+---
 # Array
 Ideal for storage but <span style="background-color: green;">must be known at compile time!</span>
 

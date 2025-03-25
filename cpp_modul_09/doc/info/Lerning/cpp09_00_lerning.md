@@ -1,3 +1,8 @@
+--- 
+[main](/) 
+
+---
+
 # Ford-Johnson algoritm 
 
 The `Ford-Johnson algorithm`, also known as `Merge-Insertion Sort`, is an efficient comparison-based sorting algorithm developed in 1959 by L. R. Ford Jr. and Selmer M. Johnson. It is notable for achieving an optimal number of comparisons when sorting a list.
