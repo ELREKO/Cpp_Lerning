@@ -6,7 +6,7 @@
 The **`cpp09`** project is designed to introduce you to the fundamental concepts of C++ programming. 
 
 
-Referenz to the [Learning Overview](doc/info/Lerning/cpp07_00_lerning.md) for  this modul.
+Referenz to the [Learning Overview](doc/info/Lerning/cpp09_00_lerning.md) for  this modul.
 
 Please note the [rules](doc/info/rulesetting/cpp_rules_picine.md) for the cpp Picine module.
 
