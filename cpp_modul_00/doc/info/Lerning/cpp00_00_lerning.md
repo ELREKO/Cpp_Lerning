@@ -12,7 +12,8 @@
 - [The Visibility](cpp00_06_visibality.md)
 - Use the internal [this->](cpp00_07_use_this_pointer.md) pointer
 - [non member attributes and non member functions](cpp00_08_non_membe_non_attribute.md)
-- [Pointer](cpp00_09_pointer_to_member.md) 
+- [Pointer](cpp00_09_pointer_to_member.md)
+- [Heap and Stack](cpp00_10_different_bettwen_heap_and_stack.md)
 
 ---
 ### Look also
