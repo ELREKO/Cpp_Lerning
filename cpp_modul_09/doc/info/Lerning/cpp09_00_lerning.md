@@ -1,65 +1,28 @@
-# Thinking about the Tasks 
+# Ford-Johnson algoritm 
 
-## ex00 
-### What kind of Error did we Handel 
-#### ex00
-- [ ] Input file muss enthalten sein
-- [ ] Check input *.txt; *.csv oder keine Ende
-- [ ] Find beginn and end of the compare file  
-- [ ] Check list 
-- [ ] Check Nummer bigger 0 less 1000 
-- [ ] Check Number bigger Max Int 
-- [ ] Check Year not bigger as the actual Date and less date 
-- [ ] Check Date Valide (monthe Day year)
-- [ ] Checke Output Nummer, is it to big? it is allow to use double ? 
+The `Ford-Johnson algorithm`, also known as `Merge-Insertion Sort`, is an efficient comparison-based sorting algorithm developed in 1959 by L. R. Ford Jr. and Selmer M. Johnson. It is notable for achieving an optimal number of comparisons when sorting a list.
+Key Features of the Ford-Johnson Algorithm (Merge-Insertion Sort)
 
+## Purpose: Minimizes the number of comparisons required for sorting.
 
-## ex03 
-Eingabe validieren:
+   ### Complexity:
 
-    Positiv?
-    Keine doppelten Werte (optional).
+- **Best-case:** `O(nlog⁡n)` 
+- **Worst-case:** `O(nlog⁡n)`, but with a lower constant factor compared to other sorting algorithms like Quicksort or Merge Sort.
+- **Exact number of comparisons:** Approaches the theoretical lower bound `log ⁡n!` given by the decision-tree model for comparison sorting.
 
-Daten in zwei Containern speichern:
+**Advantage:** Uses fewer comparisons than traditional sorting algorithms like Merge Sort or QuickSort. However, it has a high overhead, making it impractical in most real-world applications.
 
-    Einmal in std::vector.
-    Einmal in std::deque.
+## How It Works
+1. The first few elements are sorted using `direct insertion`.
+2. A special `merge-insertion` process is used to insert elements into a partially sorted list while minimizing the total number of comparisons.
+3. The list is recursively merged until it is fully sorted.
 
-Ford-Johnson-Algorithmus implementieren:
+## Practical Relevance
 
-    Zwei Implementationen: eine für jeden Container.
+Theoretically optimal in terms of minimal number of comparisons, but rarely used in practice.
+Algorithms like QuickSort, MergeSort, and TimSort are more practical because they are simpler to implement and have lower overhead.
 
-Zeit messen und ausgeben:
-
-    Zeit für std::vector.
-    Zeit für std::deque.
-
-Ausgabe formatieren:
-
-    Unsortierte Liste.
-    Sortierte Liste.
-    Zeitmessung.
-
-Fehlerbehandlung einbauen:
-
-    Ungültige Eingaben korrekt abfangen.
-
-
-----
-
-
-// template von Conatiner für Containier 
-In der C++-Standardbibliothek sind viele 
-Container (z. B. std::vector, std::list) 
-so definiert, dass sie zwei Template-Parameter haben
-
-```c++
-template <typename T, typename Allocator = std::allocator<T>>
-class vector;
-```
-daher das Template in ex02
-
-```c++ 
-template<typename T, template <typename, typename> class Container>
-```
-
+## Links 
+[Algoritmen -> p. 184](https://seriouscomputerist.atariverse.com/media/pdf/book/Art%20of%20Computer%20Programming%20-%20Volume%203%20(Sorting%20&%20Searching).pdf)
+[better explanation](https://dev.to/emuminov/human-explanation-and-step-by-step-visualisation-of-the-ford-johnson-algorithm-5g91)

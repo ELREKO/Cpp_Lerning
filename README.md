@@ -11,7 +11,9 @@
 06 - 3ex
 07 - 3ex
 08 - 3ex 
-09 - 
+09 - 3ex
+
+      38ex 
 
 -->
 
@@ -59,7 +61,7 @@ All of those exercises are compilable with the `-std=c++98-flag`, since this was
 
 
 ## **[cpp09](cpp_modul_09/README_cpp09.md): Containers and Algorithms**
-- **Goal:** Gaining proficiency with the Standard Template Library (STL)..
+- **Goal:** Gaining proficiency with the Standard Template Library (STL).
 - **Focus:** Mastering algorithms, and optimizing performance with iterators.
 
 ## [Some extra Information](doc/info/cppExtra_00_Overview.md)
